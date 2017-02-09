@@ -5,11 +5,14 @@ from matplotlib import cm
 from matplotlib import animation
 import time
 
+# some interesting places in the set
+# http://www.nahee.com/Derbyshire/manguide.html
+
 N = 500
-nIts = 50
-nZooms = 100
-x0=0.38
-y0=0.25
+nIts = 25
+nZooms = 10
+x0=0
+y0=-1
 
 movie = np.zeros([N,N,nZooms])
 
@@ -29,7 +32,7 @@ movie[:,:,0] = mask
 
 # plotting stuff
 for j in range(1,nZooms):
-    h=1./(2*j)
+    h=1./(2**j)
     print "Plot number ", j
     x = x0+h*np.linspace(-1,1,N)
     y = y0+h*np.linspace(-1,1,N)
