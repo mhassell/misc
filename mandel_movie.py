@@ -59,6 +59,8 @@ for j in range(nZooms):
     fig.savefig(name)
     time.sleep(1)
 
+
+# what is this painfully slow?!
 ## def animate(i):
 ##     frame = movie[:,:,i]
 ##     cont = plt.imshow(frame)
