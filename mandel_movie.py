@@ -10,7 +10,7 @@ import time
 
 N = 500
 nIts = 25
-nZooms = 10
+nZooms = 50
 x0=0
 y0=-1
 
