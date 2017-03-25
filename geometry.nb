@@ -1,0 +1,881 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 9.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       157,          7]
+NotebookDataLength[     37972,        872]
+NotebookOptionsPosition[     37287,        844]
+NotebookOutlinePosition[     37641,        860]
+CellTagsIndexPosition[     37598,        857]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"c1", "*", 
+         RowBox[{"Sin", "[", " ", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c2", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c3", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c4", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c5", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c6", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c7", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c8", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", "Pi", "*", "x"}], "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"d1", "*", 
+         RowBox[{"Sin", "[", " ", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d2", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d3", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d4", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d5", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d6", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d7", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d8", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c1", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c2", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c3", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c4", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c5", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c6", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c7", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c8", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d1", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d2", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d3", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d4", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d5", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d6", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d7", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d8", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5943404771005077`*^9, 3.594340583663906*^9}, 
+   3.594340685150536*^9, {3.5943407249897213`*^9, 3.594340936400174*^9}, {
+   3.594341018850301*^9, 3.594341063238*^9}, {3.5943419031429358`*^9, 
+   3.5943420199198513`*^9}, {3.594342302008395*^9, 3.594342354984704*^9}, 
+   3.594380329618146*^9, {3.5943803735707617`*^9, 3.594380431649741*^9}, {
+   3.5943912456256247`*^9, 3.5943912939517107`*^9}, {3.594391344370925*^9, 
+   3.5943913753686523`*^9}, {3.5943914106357737`*^9, 3.594391420392825*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c1$$ = 
+    6.800000000000001, $CellContext`c2$$ = -1.1500000000000004`, \
+$CellContext`c3$$ = 
+    2.8000000000000007`, $CellContext`c4$$ = -1.4000000000000004`, \
+$CellContext`c5$$ = 
+    1.450000000000001, $CellContext`c6$$ = -1.8499999999999996`, \
+$CellContext`c7$$ = 
+    1.8500000000000014`, $CellContext`c8$$ = -0.9499999999999993, \
+$CellContext`d1$$ = 7.300000000000001, $CellContext`d2$$ = 
+    2.6500000000000004`, $CellContext`d3$$ = 
+    6.400000000000002, $CellContext`d4$$ = 
+    3.75, $CellContext`d5$$ = -0.75, $CellContext`d6$$ = 
+    3.0500000000000007`, $CellContext`d7$$ = 
+    0.3500000000000014, $CellContext`d8$$ = 1.3000000000000007`, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`c1$$], -10, 10}, {
+      Hold[$CellContext`c2$$], -10, 10}, {
+      Hold[$CellContext`c3$$], -10, 10}, {
+      Hold[$CellContext`c4$$], -10, 10}, {
+      Hold[$CellContext`c5$$], -10, 10}, {
+      Hold[$CellContext`c6$$], -10, 10}, {
+      Hold[$CellContext`c7$$], -10, 10}, {
+      Hold[$CellContext`c8$$], -10, 10}, {
+      Hold[$CellContext`d1$$], -10, 10}, {
+      Hold[$CellContext`d2$$], -10, 10}, {
+      Hold[$CellContext`d3$$], -10, 10}, {
+      Hold[$CellContext`d4$$], -10, 10}, {
+      Hold[$CellContext`d5$$], -10, 10}, {
+      Hold[$CellContext`d6$$], -10, 10}, {
+      Hold[$CellContext`d7$$], -10, 10}, {
+      Hold[$CellContext`d8$$], -10, 10}}, Typeset`size$$ = {
+    301., {214., 218.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`c1$1660$$ = 
+    0, $CellContext`c2$1661$$ = 0, $CellContext`c3$1662$$ = 
+    0, $CellContext`c4$1663$$ = 0, $CellContext`c5$1664$$ = 
+    0, $CellContext`c6$1665$$ = 0, $CellContext`c7$1666$$ = 
+    0, $CellContext`c8$1667$$ = 0, $CellContext`d1$1668$$ = 
+    0, $CellContext`d2$1669$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c1$$ = -10, $CellContext`c2$$ = -10, \
+$CellContext`c3$$ = -10, $CellContext`c4$$ = -10, $CellContext`c5$$ = -10, \
+$CellContext`c6$$ = -10, $CellContext`c7$$ = -10, $CellContext`c8$$ = -10, \
+$CellContext`d1$$ = -10, $CellContext`d2$$ = -10, $CellContext`d3$$ = -10, \
+$CellContext`d4$$ = -10, $CellContext`d5$$ = -10, $CellContext`d6$$ = -10, \
+$CellContext`d7$$ = -10, $CellContext`d8$$ = -10}, "ControllerVariables" :> {
+        Hold[$CellContext`c1$$, $CellContext`c1$1660$$, 0], 
+        Hold[$CellContext`c2$$, $CellContext`c2$1661$$, 0], 
+        Hold[$CellContext`c3$$, $CellContext`c3$1662$$, 0], 
+        Hold[$CellContext`c4$$, $CellContext`c4$1663$$, 0], 
+        Hold[$CellContext`c5$$, $CellContext`c5$1664$$, 0], 
+        Hold[$CellContext`c6$$, $CellContext`c6$1665$$, 0], 
+        Hold[$CellContext`c7$$, $CellContext`c7$1666$$, 0], 
+        Hold[$CellContext`c8$$, $CellContext`c8$1667$$, 0], 
+        Hold[$CellContext`d1$$, $CellContext`d1$1668$$, 0], 
+        Hold[$CellContext`d2$$, $CellContext`d2$1669$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      ParametricPlot[{$CellContext`c1$$ 
+          Sin[(2 Pi) $CellContext`x] + $CellContext`c2$$ 
+          Cos[(2 Pi) $CellContext`x] + $CellContext`c3$$ 
+          Sin[(4 Pi) $CellContext`x] + $CellContext`c4$$ 
+          Cos[(4 Pi) $CellContext`x] + $CellContext`c5$$ 
+          Sin[(6 Pi) $CellContext`x] + $CellContext`c6$$ 
+          Cos[(6 Pi) $CellContext`x] + $CellContext`c7$$ 
+          Sin[(8 Pi) $CellContext`x] + $CellContext`c8$$ 
+          Cos[(8 Pi) $CellContext`x], $CellContext`d1$$ 
+          Sin[(2 Pi) $CellContext`x] + $CellContext`d2$$ 
+          Cos[(2 Pi) $CellContext`x] + $CellContext`d3$$ 
+          Sin[(4 Pi) $CellContext`x] + $CellContext`d4$$ 
+          Cos[(4 Pi) $CellContext`x] + $CellContext`d5$$ 
+          Sin[(6 Pi) $CellContext`x] + $CellContext`d6$$ 
+          Cos[(6 Pi) $CellContext`x] + $CellContext`d7$$ 
+          Sin[(8 Pi) $CellContext`x] + $CellContext`d8$$ 
+          Cos[(8 Pi) $CellContext`x]}, {$CellContext`x, 0, 1}], 
+      "Specifications" :> {{$CellContext`c1$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c2$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c3$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c4$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c5$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c6$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c7$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c8$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d1$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d2$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d3$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d4$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d5$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d6$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d7$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d8$$, -10, 10, Appearance -> "Labeled"}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{614., {242., 247.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.594340555432295*^9, 3.594340584073228*^9}, 
+   3.594340686077347*^9, {3.5943408789060917`*^9, 3.594340888275567*^9}, 
+   3.5943409369210367`*^9, 3.594341064153689*^9, 3.5943420325173893`*^9, 
+   3.59434235803686*^9, 3.5943804619885473`*^9, 3.594391378522986*^9, {
+   3.5943914207939034`*^9, 3.59439142292225*^9}}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.594340634609127*^9, 3.594340634616685*^9}, 
+   3.594341258592245*^9}],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{{3.5943412649786367`*^9, 3.594341265218712*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"c1", "*", 
+         RowBox[{"Sin", "[", " ", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c2", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c3", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c4", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c5", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c6", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c7", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c8", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", "Pi", "*", "x"}], "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"d1", "*", 
+         RowBox[{"Sin", "[", " ", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d2", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d3", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d4", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d5", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d6", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d7", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d8", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c1", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c2", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c3", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c4", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c5", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c6", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c7", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"c8", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d1", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d2", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d3", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d4", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d5", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d6", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d7", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"d8", ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input"],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c1$$ = 
+    5.950000000000001, $CellContext`c2$$ = 4.75, $CellContext`c3$$ = 
+    1.5500000000000007`, $CellContext`c4$$ = 
+    1.450000000000001, $CellContext`c5$$ = -1.5, $CellContext`c6$$ = 
+    0.25, $CellContext`c7$$ = 
+    0.8000000000000007, $CellContext`c8$$ = -0.34999999999999964`, \
+$CellContext`d1$$ = -3.5, $CellContext`d2$$ = 
+    6.600000000000001, $CellContext`d3$$ = 
+    2.1500000000000004`, $CellContext`d4$$ = -1.549999999999999, \
+$CellContext`d5$$ = 
+    0.7000000000000011, $CellContext`d6$$ = -0.9499999999999993, \
+$CellContext`d7$$ = 0.7000000000000011, $CellContext`d8$$ = 
+    0.8000000000000007, Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`c1$$], -10, 10}, {
+      Hold[$CellContext`c2$$], -10, 10}, {
+      Hold[$CellContext`c3$$], -10, 10}, {
+      Hold[$CellContext`c4$$], -10, 10}, {
+      Hold[$CellContext`c5$$], -10, 10}, {
+      Hold[$CellContext`c6$$], -10, 10}, {
+      Hold[$CellContext`c7$$], -10, 10}, {
+      Hold[$CellContext`c8$$], -10, 10}, {
+      Hold[$CellContext`d1$$], -10, 10}, {
+      Hold[$CellContext`d2$$], -10, 10}, {
+      Hold[$CellContext`d3$$], -10, 10}, {
+      Hold[$CellContext`d4$$], -10, 10}, {
+      Hold[$CellContext`d5$$], -10, 10}, {
+      Hold[$CellContext`d6$$], -10, 10}, {
+      Hold[$CellContext`d7$$], -10, 10}, {
+      Hold[$CellContext`d8$$], -10, 10}}, Typeset`size$$ = {
+    360., {179., 183.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`c1$377$$ = 
+    0, $CellContext`c2$378$$ = 0, $CellContext`c3$379$$ = 
+    0, $CellContext`c4$380$$ = 0, $CellContext`c5$381$$ = 
+    0, $CellContext`c6$382$$ = 0, $CellContext`c7$383$$ = 
+    0, $CellContext`c8$384$$ = 0, $CellContext`d1$385$$ = 
+    0, $CellContext`d2$386$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c1$$ = -10, $CellContext`c2$$ = -10, \
+$CellContext`c3$$ = -10, $CellContext`c4$$ = -10, $CellContext`c5$$ = -10, \
+$CellContext`c6$$ = -10, $CellContext`c7$$ = -10, $CellContext`c8$$ = -10, \
+$CellContext`d1$$ = -10, $CellContext`d2$$ = -10, $CellContext`d3$$ = -10, \
+$CellContext`d4$$ = -10, $CellContext`d5$$ = -10, $CellContext`d6$$ = -10, \
+$CellContext`d7$$ = -10, $CellContext`d8$$ = -10}, "ControllerVariables" :> {
+        Hold[$CellContext`c1$$, $CellContext`c1$377$$, 0], 
+        Hold[$CellContext`c2$$, $CellContext`c2$378$$, 0], 
+        Hold[$CellContext`c3$$, $CellContext`c3$379$$, 0], 
+        Hold[$CellContext`c4$$, $CellContext`c4$380$$, 0], 
+        Hold[$CellContext`c5$$, $CellContext`c5$381$$, 0], 
+        Hold[$CellContext`c6$$, $CellContext`c6$382$$, 0], 
+        Hold[$CellContext`c7$$, $CellContext`c7$383$$, 0], 
+        Hold[$CellContext`c8$$, $CellContext`c8$384$$, 0], 
+        Hold[$CellContext`d1$$, $CellContext`d1$385$$, 0], 
+        Hold[$CellContext`d2$$, $CellContext`d2$386$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      ParametricPlot[{$CellContext`c1$$ 
+          Sin[(2 Pi) $CellContext`x] + $CellContext`c2$$ 
+          Cos[(2 Pi) $CellContext`x] + $CellContext`c3$$ 
+          Sin[(4 Pi) $CellContext`x] + $CellContext`c4$$ 
+          Cos[(4 Pi) $CellContext`x] + $CellContext`c5$$ 
+          Sin[(6 Pi) $CellContext`x] + $CellContext`c6$$ 
+          Cos[(6 Pi) $CellContext`x] + $CellContext`c7$$ 
+          Sin[(8 Pi) $CellContext`x] + $CellContext`c8$$ 
+          Cos[(8 Pi) $CellContext`x], $CellContext`d1$$ 
+          Sin[(2 Pi) $CellContext`x] + $CellContext`d2$$ 
+          Cos[(2 Pi) $CellContext`x] + $CellContext`d3$$ 
+          Sin[(4 Pi) $CellContext`x] + $CellContext`d4$$ 
+          Cos[(4 Pi) $CellContext`x] + $CellContext`d5$$ 
+          Sin[(6 Pi) $CellContext`x] + $CellContext`d6$$ 
+          Cos[(6 Pi) $CellContext`x] + $CellContext`d7$$ 
+          Sin[(8 Pi) $CellContext`x] + $CellContext`d8$$ 
+          Cos[(8 Pi) $CellContext`x]}, {$CellContext`x, 0, 1}], 
+      "Specifications" :> {{$CellContext`c1$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c2$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c3$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c4$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c5$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c6$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c7$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`c8$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d1$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d2$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d3$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d4$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d5$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d6$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d7$$, -10, 10, Appearance -> 
+         "Labeled"}, {$CellContext`d8$$, -10, 10, Appearance -> "Labeled"}}, 
+      "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{673., {238., 244.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.594392509126549*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Manipulate", "[", 
+  RowBox[{
+   RowBox[{"ParametricPlot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"c1", "*", 
+         RowBox[{"Sin", "[", " ", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c2", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c3", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c4", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c5", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c6", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c7", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c8", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c9", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"10", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"c10", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"10", "*", "Pi", "*", "x"}], "]"}]}]}], ",", 
+       RowBox[{
+        RowBox[{"d1", "*", 
+         RowBox[{"Sin", "[", " ", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d2", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"2", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d3", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d4", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"4", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d5", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d6", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"6", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d7", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d8", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"8", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d9", "*", 
+         RowBox[{"Sin", "[", 
+          RowBox[{"10", "*", "Pi", "*", "x"}], "]"}]}], "+", 
+        RowBox[{"d10", "*", 
+         RowBox[{"Cos", "[", 
+          RowBox[{"10", "*", "Pi", "*", "x"}], "]"}]}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", "0", ",", "1"}], "}"}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c1", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c2", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c3", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c4", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c5", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c6", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c7", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c8", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   "\[IndentingNewLine]", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c9", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"c10", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d1", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d2", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d3", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d4", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d5", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d6", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d7", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d8", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d9", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}], ",", 
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{"d10", ",", "0"}], "}"}], ",", 
+     RowBox[{"-", "10"}], ",", "10", ",", 
+     RowBox[{"Appearance", "\[Rule]", "\"\<Labeled\>\""}]}], "}"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.5988868525468807`*^9, 3.598886982685809*^9}, {
+  3.5988870333342*^9, 3.598887041907193*^9}, {3.6002934126849613`*^9, 
+  3.6002935139069567`*^9}, {3.600293552050088*^9, 3.6002936065485907`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`c1$$ = 
+    1.6500000000000004`, $CellContext`c10$$ = 0, $CellContext`c2$$ = 
+    0.3000000000000007, $CellContext`c3$$ = 0, $CellContext`c4$$ = 
+    0, $CellContext`c5$$ = 0, $CellContext`c6$$ = 0., $CellContext`c7$$ = 
+    0, $CellContext`c8$$ = 0, $CellContext`c9$$ = 
+    0., $CellContext`d1$$ = -0.09999999999999964, $CellContext`d10$$ = 
+    0., $CellContext`d2$$ = 0.8000000000000007, $CellContext`d3$$ = 
+    0., $CellContext`d4$$ = 0., $CellContext`d5$$ = 
+    0.20000000000000107`, $CellContext`d6$$ = -0.3999999999999986, \
+$CellContext`d7$$ = 0., $CellContext`d8$$ = 0., $CellContext`d9$$ = 0., 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{{
+       Hold[$CellContext`c1$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c2$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c3$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c4$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c5$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c6$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c7$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c8$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c9$$], 0}, -10, 10}, {{
+       Hold[$CellContext`c10$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d1$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d2$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d3$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d4$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d5$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d6$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d7$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d8$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d9$$], 0}, -10, 10}, {{
+       Hold[$CellContext`d10$$], 0}, -10, 10}}, Typeset`size$$ = {
+    360., {101., 105.}}, Typeset`update$$ = 0, Typeset`initDone$$, 
+    Typeset`skipInitDone$$ = True, $CellContext`c1$35034$$ = 
+    0, $CellContext`c2$35035$$ = 0, $CellContext`c3$35036$$ = 
+    0, $CellContext`c4$35037$$ = 0, $CellContext`c5$35038$$ = 
+    0, $CellContext`c6$35039$$ = 0, $CellContext`c7$35040$$ = 
+    0, $CellContext`c8$35041$$ = 0, $CellContext`c9$35042$$ = 
+    0, $CellContext`c10$35043$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, 
+      "Variables" :> {$CellContext`c1$$ = 0, $CellContext`c10$$ = 
+        0, $CellContext`c2$$ = 0, $CellContext`c3$$ = 0, $CellContext`c4$$ = 
+        0, $CellContext`c5$$ = 0, $CellContext`c6$$ = 0, $CellContext`c7$$ = 
+        0, $CellContext`c8$$ = 0, $CellContext`c9$$ = 0, $CellContext`d1$$ = 
+        0, $CellContext`d10$$ = 0, $CellContext`d2$$ = 0, $CellContext`d3$$ = 
+        0, $CellContext`d4$$ = 0, $CellContext`d5$$ = 0, $CellContext`d6$$ = 
+        0, $CellContext`d7$$ = 0, $CellContext`d8$$ = 0, $CellContext`d9$$ = 
+        0}, "ControllerVariables" :> {
+        Hold[$CellContext`c1$$, $CellContext`c1$35034$$, 0], 
+        Hold[$CellContext`c2$$, $CellContext`c2$35035$$, 0], 
+        Hold[$CellContext`c3$$, $CellContext`c3$35036$$, 0], 
+        Hold[$CellContext`c4$$, $CellContext`c4$35037$$, 0], 
+        Hold[$CellContext`c5$$, $CellContext`c5$35038$$, 0], 
+        Hold[$CellContext`c6$$, $CellContext`c6$35039$$, 0], 
+        Hold[$CellContext`c7$$, $CellContext`c7$35040$$, 0], 
+        Hold[$CellContext`c8$$, $CellContext`c8$35041$$, 0], 
+        Hold[$CellContext`c9$$, $CellContext`c9$35042$$, 0], 
+        Hold[$CellContext`c10$$, $CellContext`c10$35043$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      ParametricPlot[{$CellContext`c1$$ 
+          Sin[(2 Pi) $CellContext`x] + $CellContext`c2$$ 
+          Cos[(2 Pi) $CellContext`x] + $CellContext`c3$$ 
+          Sin[(4 Pi) $CellContext`x] + $CellContext`c4$$ 
+          Cos[(4 Pi) $CellContext`x] + $CellContext`c5$$ 
+          Sin[(6 Pi) $CellContext`x] + $CellContext`c6$$ 
+          Cos[(6 Pi) $CellContext`x] + $CellContext`c7$$ 
+          Sin[(8 Pi) $CellContext`x] + $CellContext`c8$$ 
+          Cos[(8 Pi) $CellContext`x] + $CellContext`c9$$ 
+          Sin[(10 Pi) $CellContext`x] + $CellContext`c10$$ 
+          Cos[(10 Pi) $CellContext`x], $CellContext`d1$$ 
+          Sin[(2 Pi) $CellContext`x] + $CellContext`d2$$ 
+          Cos[(2 Pi) $CellContext`x] + $CellContext`d3$$ 
+          Sin[(4 Pi) $CellContext`x] + $CellContext`d4$$ 
+          Cos[(4 Pi) $CellContext`x] + $CellContext`d5$$ 
+          Sin[(6 Pi) $CellContext`x] + $CellContext`d6$$ 
+          Cos[(6 Pi) $CellContext`x] + $CellContext`d7$$ 
+          Sin[(8 Pi) $CellContext`x] + $CellContext`d8$$ 
+          Cos[(8 Pi) $CellContext`x] + $CellContext`d9$$ 
+          Sin[(10 Pi) $CellContext`x] + $CellContext`d10$$ 
+          Cos[(10 Pi) $CellContext`x]}, {$CellContext`x, 0, 1}], 
+      "Specifications" :> {{{$CellContext`c1$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c2$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c3$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c4$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c5$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c6$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c7$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c8$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c9$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`c10$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d1$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d2$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d3$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d4$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d5$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d6$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d7$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d8$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d9$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}, {{$CellContext`d10$$, 0}, -10, 10, Appearance -> 
+         "Labeled"}}, "Options" :> {}, "DefaultOptions" :> {}],
+     ImageSizeCache->{677., {294., 300.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Manipulate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.598886983488501*^9, 3.598887042252104*^9, {3.600293578027646*^9, 
+   3.600293607208305*^9}, 3.600300462109063*^9, 3.6003006308387947`*^9, 
+   3.600300743435791*^9}]
+}, Open  ]],
+
+Cell[BoxData[""], "Input",
+ CellChangeTimes->{3.600300478312748*^9, 3.648983166858279*^9}]
+},
+WindowSize->{868, 752},
+WindowMargins->{{180, Automatic}, {Automatic, 0}},
+FrontEndVersion->"10.2 for Mac OS X x86 (32-bit, 64-bit Kernel) (July 29, \
+2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[579, 22, 5232, 130, 250, "Input"],
+Cell[5814, 154, 6246, 114, 506, "Output"]
+}, Open  ]],
+Cell[12075, 271, 118, 2, 28, "Input"],
+Cell[12196, 275, 94, 1, 28, "Input"],
+Cell[CellGroupData[{
+Cell[12315, 280, 4715, 123, 250, "Input"],
+Cell[17033, 405, 5891, 108, 499, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[22961, 518, 7134, 195, 284, "Input"],
+Cell[30098, 715, 7080, 123, 611, "Output"]
+}, Open  ]],
+Cell[37193, 841, 90, 1, 28, "Input"]
+}
+]
+*)
+
+(* End of internal cache information *)
