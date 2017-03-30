@@ -10,14 +10,14 @@ import time
 
 N = 500
 nIts = 25
-nZooms = 50
+nZooms = 10
 x0=0
 y0=-1
 
 movie = np.zeros([N,N,nZooms])
 
-x = np.linspace(-2,1,N)
-y = np.linspace(-1,1,N)
+x = np.linspace(-2,1,N,dtype=np.float128)
+y = np.linspace(-1,1,N,dtype=np.float128)
 X,Y = np.meshgrid(x,y)
 c = X + 1j*Y
 z = 0*c
@@ -34,12 +34,12 @@ movie[:,:,0] = mask
 for j in range(1,nZooms):
     h=1./(2**j)
     print "Plot number ", j
-    x = x0+h*np.linspace(-1,1,N)
-    y = y0+h*np.linspace(-1,1,N)
+    x = x0+h*np.linspace(-1,1,N,dtype=np.float128)
+    y = y0+h*np.linspace(-1,1,N,dtype=np.float128)
     X,Y = np.meshgrid(x,y)
     c = X + 1j*Y
     z = 0*c
-    for i in range(nIts):
+    for i in range(j*nIts):   # more iterations at deeper levels
         z = z**2 + c
 
     mask = np.abs(z) < 1
