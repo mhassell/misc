@@ -10,7 +10,7 @@ import time
 
 N = 500
 nIts = 25
-nZooms = 10
+nZooms = 30
 x0=0
 y0=-1
 
@@ -39,7 +39,7 @@ for j in range(1,nZooms):
     X,Y = np.meshgrid(x,y)
     c = X + 1j*Y
     z = 0*c
-    for i in range(j*nIts):   # more iterations at deeper levels
+    for i in range(nIts):   # more iterations at deeper levels??
         z = z**2 + c
 
     mask = np.abs(z) < 1
