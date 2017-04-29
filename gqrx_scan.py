@@ -4,7 +4,7 @@ import time
 
 class Scanner:
 
-	def __init__(self, hostname='127.0.0.1', port=7356, directory='/Users/matthewhassell/GitHub/misc', waitTime=2, signalStrength=-20):
+	def __init__(self, hostname='127.0.0.1', port=7356, directory='/Users/matthewhassell/GitHub/misc', waitTime=2, signalStrength=-15):
 		self.host = hostname
 		self.port = port
 		self.directory = directory
@@ -26,9 +26,11 @@ class Scanner:
 		loop over the frequencies in the list, and stop if the frequency is active (signal strength is high enough)
 		"""
 		for freq in self.freqs.keys():
+			print freq
+			print self._get_level()
 			self._set_freq(freq)
 			self._set_mode(self.freqs[freq])
-			while self._get_level() >= self.signalStrength:
+			while float(self._get_level()) >= self.signalStrength:
 				time.sleep(self.waitTime)
 
 
