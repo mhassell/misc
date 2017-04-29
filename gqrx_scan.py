@@ -4,7 +4,7 @@ import time
 
 class Scanner:
 
-	def __init__(self, hostname='127.0.0.1', port=7356, directory='/Users/matthewhassell/GitHub/misc', waitTime=2, signalStrength=-15):
+	def __init__(self, hostname='127.0.0.1', port=7356, directory='/Users/matthewhassell/GitHub/misc', waitTime=5, signalStrength=-15):
 		self.host = hostname
 		self.port = port
 		self.directory = directory
@@ -25,13 +25,15 @@ class Scanner:
 		"""
 		loop over the frequencies in the list, and stop if the frequency is active (signal strength is high enough)
 		"""
-		for freq in self.freqs.keys():
-			print freq
-			print self._get_level()
-			self._set_freq(freq)
-			self._set_mode(self.freqs[freq])
-			while float(self._get_level()) >= self.signalStrength:
-				time.sleep(self.waitTime)
+		while(1):
+			for freq in self.freqs.keys():
+				print freq
+				self._set_freq(freq)
+				self._set_mode(self.freqs[freq])
+				time.sleep(0.2)
+				if float(self._get_level()) >= self.signalStrength:
+					while float(self._get_level()) >= self.signalStrength:
+						time.sleep(self.waitTime)
 
 
    	def load(self):
@@ -42,8 +44,9 @@ class Scanner:
    		with open('freq.csv','r') as csvfile:
    			reader = csv.reader(csvfile, delimiter = ',')
    			for row in reader:
-   				freq = int(float(row[0].strip('.'))*1e6)  # convert to hz
-   				self.freqs[freq] = row[1]     # add the freq to the dict as a key and the mode as the value
+   				freq = str(float(row[0])*1e5)		# 1e5 isn't good
+   				freq = int(freq.replace('.', '')) 	# converted to hz
+   				self.freqs[freq] = row[1]     		# add the freq to the dict as a key and the mode as the value
 
 
    	def _set_freq(self, freq):
@@ -54,3 +57,8 @@ class Scanner:
 
    	def _get_level(self):
    		return self._update("l")
+
+if __name__ == "__main__":
+	scanner = Scanner()
+	scanner.load()
+	scanner.scan()
