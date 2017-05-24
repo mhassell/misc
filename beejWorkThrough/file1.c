@@ -34,3 +34,23 @@ struct sockaddr_in{
 	unsigned char		sin_zero[8];   	// should the 8 be hard coded?
 
 }
+
+struct in_addr {
+	// part of the sockaddr_in struct
+	uint32_t s_addr;  					// 32 bit int (4 bytes)
+}
+
+struct sockaddr_in sa;					// ipv4 socket address
+
+inet_pton(AF_INET, "127.0.0.1", &(sa.sin_addr));  // convert presentation to network
+
+char ip4[INET_ADDRSTRLEN]; 				// space to hold the IPv4 string
+struct sockaddr_in sa; 					// pretend this is loaded with something
+inet_ntop(AF_INET, &(sa.sin_addr), ip4, INET_ADDRSTRLEN);
+printf("The IPv4 address is: %s\n", ip4);
+
+
+
+
+
+
