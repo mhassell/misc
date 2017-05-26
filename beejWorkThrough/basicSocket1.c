@@ -8,7 +8,7 @@
 
 int main(){
 
-	int sockfd;
+	int sockfd, newfd;
 	int status;
 	struct addrinfo hints, *res;
 	char ipstr[INET6_ADDRSTRLEN];
@@ -36,6 +36,18 @@ int main(){
 		return 1;
 	}
 
-	close(sockfd);
 
+	while(1){
+
+			if((newfd = accept(sockfd, res->ai_socktype, res->ai_addrlen))!=0){
+			printf("Error accepting a connection\n");
+			close(sockfd);
+			return 1;
+	}
+
+
+
+	}
+
+	
 }
