@@ -1,0 +1,6 @@
+hellomake: hellomake.c hellofunc.c hellomake.h
+	gcc -o hellomake hellomake.c hellofunc.c -I.
+
+# very simple makefile
+# must indent the gcc command
+# the -I. flag says to search the current directory (.) for the headers
