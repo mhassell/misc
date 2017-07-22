@@ -1,5 +1,3 @@
-# https://stackoverflow.com/questions/39061354/scraping-youtube-playlist-video-links
-
 import urllib2
 from bs4 import BeautifulSoup 
 import os
@@ -8,6 +6,7 @@ from pytube import YouTube
 nVideos = 5
 
 # parse the page here
+# https://stackoverflow.com/questions/39061354/scraping-youtube-playlist-video-links
 htmlParser = "lxml"
 url='https://www.youtube.com/playlist?list=UU9-y-6csu5WGm29I7JiwpnA'
 path = '/Users/matthewhassell/Desktop'
@@ -25,7 +24,7 @@ lastFive = lastVideoFile.read()
 
 if lastFive == '':
 	for a in links:
-		lastVideoFile.write((a.get("href")))
+		lastVideoFile.write(a.get("href") + '\n')
 
 	lastVideoFile.close()
 else:
