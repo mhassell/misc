@@ -1,48 +1,53 @@
 import urllib2
 from bs4 import BeautifulSoup 
-import os
 from pytube import YouTube
+import MySQLdb
+import config
 
+conn = MySQLdb.connect("localhost", config.USERNAME, config.PASSWORD, "computerphile")   # host, uname, pw, dbname
+C = conn.cursor()
+
+# constants 
 nVideos = 5
-
-# parse the page here
-# https://stackoverflow.com/questions/39061354/scraping-youtube-playlist-video-links
-htmlParser = "lxml"
 url='https://www.youtube.com/playlist?list=UU9-y-6csu5WGm29I7JiwpnA'
 path = '/Users/matthewhassell/Desktop'
+
+# parse the page here
+htmlParser = "lxml"
 html=urllib2.urlopen(url)
 response=html.read()
 soup=BeautifulSoup(response, htmlParser)
 links = soup.find_all('a', attrs={'class':'pl-video-title-link'})
-
 links = links[0:nVideos]   # get the most recent videos
 
-# is this even new?
-lastVideoFile = open("lastVideos.txt", "r+b")
-lastFive = lastVideoFile.read()
+isOld = [0]*nVideos
 
+# C.execute("SELECT * FROM videos")
+# rows = C.fetchall()
+# for row in rows:
+#     print row[1].split('&')[0]
 
-if lastFive == '':
-	for a in links:
-		lastVideoFile.write(a.get("href") + '\n')
+# check if my most recent fetches are already in the DB
+for j in range(nVideos):
+    for row in rows:
+        if links[j].get("href").split('&')[0] == row[1]:
+            isOld[j] = 1
+            continue
 
-	lastVideoFile.close()
-else:
-	# work forward from the old list and backwards from the new list
+if sum(isOld) == nVideos:
+	print "All up to date"
+else: 
 	for j in range(nVideos):
-		if links[nVideos-1-j].get("href") == lastFive[j]:
-			break
-	# these are the new ones		
-	links = links[0:nVideos-j]
-	lastFive = links + lastFive[j:]
-	
-	# take care of the file
-	lastVideoFile.seek(0)
-	lastVideoFile.write(lastFive)
-	lastVideoFile.close()
+		if not isOld[j]:
+    		C.execute("INSERT INTO VIDEOS (name) VALUES ('%s')" % (links[j].get("href").split('&')[0]))
+    		conn.commit()
 
-# now download the new ones
-for a in links:
-	yt = YouTube('https://www.youtube.com' + a.get("href"))
-	video = yt.get('mp4', '360p')
-	video.download('/Users/matthewhassell/Desktop')
+	# now download the new ones
+	for j in range(nVideos):
+    	if not isOld[j]:
+        	print "Found new video %s" % links[j].text
+        	yt = YouTube('https://www.youtube.com' + links[j].get("href"))
+        	video = yt.get('mp4', '360p')
+        	video.download(path)
+
+C.close()
