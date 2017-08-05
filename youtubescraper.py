@@ -22,12 +22,10 @@ links = links[0:nVideos]   # get the most recent videos
 
 isOld = [0]*nVideos
 
-# C.execute("SELECT * FROM videos")
-# rows = C.fetchall()
-# for row in rows:
-#     print row[1].split('&')[0]
-
 # check if my most recent fetches are already in the DB
+C.execute("SELECT * FROM videos")
+rows = C.fetchall()
+
 for j in range(nVideos):
     for row in rows:
         if links[j].get("href").split('&')[0] == row[1]:
@@ -36,18 +34,19 @@ for j in range(nVideos):
 
 if sum(isOld) == nVideos:
 	print "All up to date"
-else: 
+else:
 	for j in range(nVideos):
 		if not isOld[j]:
-    		C.execute("INSERT INTO VIDEOS (name) VALUES ('%s')" % (links[j].get("href").split('&')[0]))
-    		conn.commit()
+			yt = YouTube('https://www.youtube.com' + links[j].get("href"))
+	        C.execute("INSERT INTO VIDEOS (url, title) VALUES ('%s', '%s')" % (links[j].get("href").split('&')[0], yt.title))
+	        conn.commit()
 
 	# now download the new ones
 	for j in range(nVideos):
-    	if not isOld[j]:
-        	print "Found new video %s" % links[j].text
-        	yt = YouTube('https://www.youtube.com' + links[j].get("href"))
-        	video = yt.get('mp4', '360p')
-        	video.download(path)
+		if not isOld[j]:
+			print "Found new video %s" % links[j].text
+			yt = YouTube('https://www.youtube.com' + links[j].get("href"))
+			video = yt.get('mp4', '360p')
+			video.download(path)
 
 C.close()
