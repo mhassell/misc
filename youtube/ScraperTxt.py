@@ -12,17 +12,17 @@ class Scraper(object):
         
 
         # constants
-        self.nVideos = nVideos
-        self.url =  url   # 'https://www.youtube.com/playlist?list=UU9-y-6csu5WGm29I7JiwpnA'
+        self.nVideos = nVideos    # number of videos to check from youtube (and to check against in db)
+        self.url =  url           # 'https://www.youtube.com/playlist?list=UU9-y-6csu5WGm29I7JiwpnA'
         self.savePath = savePath  # '/home/kernelpanic/Desktop'
         self.listPath = listPath
 
     def scrape(self):
         # parse the page here
         htmlParser = "lxml"
-        html=urllib2.urlopen(self.url)
-        response=html.read()
-        soup=BeautifulSoup(response, htmlParser)
+        html = urllib2.urlopen(self.url)
+        response = html.read()
+        soup = BeautifulSoup(response, htmlParser)
         links = soup.find_all('a', attrs={'class':'pl-video-title-link'})
         links = links[0:self.nVideos]   # get the most recent videos
 
@@ -30,28 +30,38 @@ class Scraper(object):
 
         # check if my most recent fetches are already in the DB
         f = open(self.listPath,'r')
+        previousVideos = []
         for line in f:
-            line.rstrip('\n')
+            previousVideos.append(line.rstrip('\n'))
 
+        f.close()
 
-        for j in range(self.nVideos):
-            for row in rows:
-                if links[j].get("href").split('&')[0] == row[1]:
-                    isOld[j] = 1
-                    continue
+        if previousVideos:
+            for j in range(self.nVideos):
+                for row in previousVideos:
+                    print row
+                    if links[j].get("href").split('&')[0] == row[0]:
+                        isOld[j] = 1
+                        continue
 
+        downloads = []
+        f = open(self.listPath, 'a+')
         for j in range(self.nVideos):
             if not isOld[j]:
                 yt = YouTube('https://www.youtube.com' + links[j].get("href"))
-                self.C.execute("INSERT INTO VIDEOS (url, title) VALUES ('%s', '%s')" % (links[j].get("href").split('&')[0], yt.title))
+                downloads.append(yt)
+                f.write('https://www.youtube.com' + links[j].get("href") + '\n')
+        f.close()
+
                 
         # now download the new ones
         for j in range(self.nVideos):
             if not isOld[j]:
                 print "Found new video %s" % links[j].text
                 yt = YouTube('https://www.youtube.com' + links[j].get("href"))
-                video = yt.get('mp4', '360p')
-                video.download(self.path)
+                yt.streams.first().download(self.savePath)
+                # video = yt.get('mp4', '360p')
+                # video.download(self.path)
             else:
                 yt = YouTube('https://www.youtube.com' + links[j].get("href"))
                 print yt
